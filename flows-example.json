@@ -1,0 +1,215 @@
+[
+    {
+        "id": "3592a267198ee311",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8268b2967c3710bd",
+        "type": "mqtt in",
+        "z": "3592a267198ee311",
+        "name": "",
+        "topic": "encyclopedia/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "47e14261ce10e31c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 620,
+        "y": 240,
+        "wires": [
+            [
+                "fcde41fdcc4ef1eb"
+            ]
+        ]
+    },
+    {
+        "id": "fcde41fdcc4ef1eb",
+        "type": "debug",
+        "z": "3592a267198ee311",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 810,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4e4a53ff9976376e",
+        "type": "mqtt out",
+        "z": "3592a267198ee311",
+        "name": "",
+        "topic": "encyclopedia/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "47e14261ce10e31c",
+        "x": 370,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7e951d5aaa2cf657",
+        "type": "inject",
+        "z": "3592a267198ee311",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hello world",
+        "payloadType": "str",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "4e4a53ff9976376e"
+            ]
+        ]
+    },
+    {
+        "id": "aa96f3ebd39b1cab",
+        "type": "inject",
+        "z": "3592a267198ee311",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "hi there",
+        "payloadType": "str",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "4e4a53ff9976376e"
+            ]
+        ]
+    },
+    {
+        "id": "21730db2ee9a30ef",
+        "type": "inject",
+        "z": "3592a267198ee311",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hello MQTT",
+        "payloadType": "str",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "4e4a53ff9976376e"
+            ]
+        ]
+    },
+    {
+        "id": "bcadf46b0898488e",
+        "type": "comment",
+        "z": "3592a267198ee311",
+        "name": "Sending Messages",
+        "info": "",
+        "x": 170,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c9474a8d47dba572",
+        "type": "comment",
+        "z": "3592a267198ee311",
+        "name": "Recieving Messages",
+        "info": "",
+        "x": 630,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "47e14261ce10e31c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "",
+        "port": "",
+        "tls": "5a04297d9c363e9f",
+        "clientid": "NODE-RED",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5a04297d9c363e9f",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "isrgrootx1.pem",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    }
+]
